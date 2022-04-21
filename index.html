@@ -3,14 +3,23 @@
 <head></head>
 
 <body>
-    <h3>First Code</h3>
     Result is: <div id="output"></div>
+    Result is: <div id="output1"></div>
+    Result is: <div id="output2"></div>
 
     <script src="app.js"></script>
     <script>
         const result = add(4, 5);
-        document.querySelector('#output').innerHTML = result;
+        document.querySelector("#output").innerHTML = result;
+
+        // const result1 = add1(5, 5);
+        const result1 = add1("Mrs.X", "Mr.X");
+        document.querySelector('#output1').innerHTML = result1;
+
+        const result2 = multiply(5, 5, 5);
+        document.querySelector('#output2').innerHTML = result2;
     </script>
+
 </body>
 
 </html>

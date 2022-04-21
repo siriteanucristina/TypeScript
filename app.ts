@@ -43,7 +43,85 @@ let combination: (string | number)[];
 combination = [1, "One", 2, "Two", 3, "Three"];
 console.log(combination);
 
+//The tuple type
+let person: [string, number]; // Rule!! Prima pe pozitie este string inseamna ca introducem string, daca introducem numer va da eroare
+person = ["Mr.X", 30];
+console.log(person);
+
+//The enum type
+let isSummer = "iunie";
+
+switch (isSummer) {
+  case "iunie":
+    console.log("It is June!");
+    break;
+
+  case "iulie":
+    console.log("It is July!");
+    break;
+
+  case "august":
+    console.log("It is August!");
+    break;
+
+  default:
+    console.log("It isn't summer!");
+    break;
+}
+
+// if-else
+const nr1 = 10;
+let nr2 = 15;
+if (nr1 > nr2) {
+  nr2++;
+} else {
+  nr2--;
+}
+console.log(nr2);
+
+//if - else if - else
+let count: number;
+let number = 90;
+
+if (number > 0 && number <= 35) {
+  console.log(count, "Numarul este intre 0..35");
+} else if (number > 35 && number <= 70) {
+  console.log(count, "Numarul este intre 35..70");
+} else {
+  count = 100;
+  console.log("Numarul este intre 70..100");
+}
+
+//for
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
+
+//do..while
+let i = 1;
+
+do {
+  console.log(i);
+  ++i;
+} while (i <= 5);
+
 //Functii
 function add(x: number, y: number) {
   return x + y;
+}
+
+function add1(a: any, b: any) {
+  if (typeof a === "number" && typeof b === "number") {
+    return a * b;
+  }
+  if (typeof a === "string" && typeof b === "string") {
+    return a.concat(", ", b);
+  }
+}
+
+function multiply(a: number, b: number, c?: number): number {
+  if (typeof c !== "undefined") {
+    return a * b * c;
+  }
+  return a * b;
 }
