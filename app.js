@@ -108,3 +108,27 @@ function multiply(a, b, c) {
     }
     return a * b;
 }
+//Class
+var Girl = /** @class */ (function () {
+    function Girl() {
+    }
+    return Girl;
+}());
+var girl = new Girl();
+girl.name = "Clare";
+girl.surname = "Fortun";
+girl.age = 7;
+girl.hobby = "Dans";
+console.log(girl);
+var Rectangle = /** @class */ (function () {
+    function Rectangle(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    Rectangle.prototype.getArea = function () {
+        return this.width * this.height;
+    };
+    return Rectangle;
+}());
+var myRect = new Rectangle(10, 15);
+console.log("Aria cercului este ", myRect.getArea());

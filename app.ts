@@ -125,3 +125,35 @@ function multiply(a: number, b: number, c?: number): number {
   }
   return a * b;
 }
+
+//Class
+class Girl {
+  name: string;
+  surname: string;
+  age: number;
+  hobby: string;
+}
+const girl = new Girl();
+girl.name = "Clare";
+girl.surname = "Fortun";
+girl.age = 7;
+girl.hobby = "Dans";
+console.log(girl);
+
+//Moștenire: Implementări
+interface Shape {
+  getArea: () => number;
+}
+
+class Rectangle implements Shape {
+  public constructor(
+    protected readonly width: number,
+    protected readonly height: number
+  ) {}
+
+  public getArea(): number {
+    return this.width * this.height;
+  }
+}
+const myRect = new Rectangle(10, 15);
+console.log("Aria cercului este ", myRect.getArea());
